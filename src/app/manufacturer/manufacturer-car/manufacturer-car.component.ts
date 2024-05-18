@@ -11,13 +11,13 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-manufacturer-car',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, MatTableModule],
   templateUrl: './manufacturer-car.component.html',
   styleUrl: './manufacturer-car.component.css'
 })
 export class ManufacturerCarsComponent {
   public cars: Car[] = []
-  public displayedColumns: string[] = ["carid" , "carname" , "cardrivetrain", "caryear" ,  "manufacturer" ]
+  public displayedColumns: string[] = ["carid" , "carname" , "cardrivetrain", "caryear", "manufacturerId"]
   id: number;
 
   constructor(private http: HttpClient, private activateRoute: ActivatedRoute) {
@@ -29,7 +29,7 @@ export class ManufacturerCarsComponent {
   getCars() {
     let idparameter = this.activateRoute.snapshot.paramMap.get("id");
     this.id = idparameter? + idparameter : 0,
-     this.http.get<Car[]>(`${environment.baseUrl}api/manufacturer/manufacturerCars/${this.id}`).subscribe(
+     this.http.get<Car[]>(`${environment.baseUrl}api/manufacturers/manufacturerCars/${this.id}`).subscribe(
        {
          next: result => this.cars = result, 
          error: error => console.error(error)

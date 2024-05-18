@@ -14,7 +14,7 @@ import { NavbarComponent } from './nav-bar/nav-bar.component';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
     //HttpClientModule,
-    imports: [RouterOutlet, HelloComponent, NavbarComponent, HttpClientModule,]
+    imports: [RouterOutlet, HelloComponent, NavbarComponent,HttpClientModule]
 })
 export class AppComponent {
   title = 'WeatherClient';
