@@ -1,7 +1,7 @@
 export interface Manufacturer {
 manufacturer_id: number;
-manufacturer_name: string;
-manufacturer_country: string;
+manufacturerName: string;
+manufacturerCountry: string;
 
 }
 export interface Car {
