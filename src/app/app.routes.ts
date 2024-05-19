@@ -5,13 +5,13 @@ import { ManufacturerCarsComponent } from './manufacturer/manufacturer-car/manuf
 
 //import { CountriesComponent } from './countries/countries.component';
 //import { CountryCitiesComponent } from './countries/country-cities.component';
-//import { LoginComponent } from './auth/login.component';
+import { LoginComponent } from './login/login.component';
 
 export const routes: Routes = [
     {path: '', component:HelloComponent, pathMatch: 'full'},
     {path: 'manufacturers', component: ManufacturersComponent},
-    {path: 'manufacturerCars/:id' , component: ManufacturerCarsComponent}
+    {path: 'manufacturerCars/:id' , component: ManufacturerCarsComponent},
     //{path:'countries', component:CountriesComponent},
     //{path: 'countryCities/:id', component:CountryCitiesComponent},
-    // {path: 'login', component:LoginComponent}
+    {path: 'login', component:LoginComponent}
 ];
