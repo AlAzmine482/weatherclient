@@ -10,7 +10,7 @@
     <tbody>
         @for(Manufacturer of manufacturers; track $index) {
             <tr>
-                <td><a [routerLink]="['/manufacturerCars', Manufacturer.manufacturer_id]">{{Manufacturer.manufacturer_id}}</a>
+                <td><a [routerLink]="['/manufacturerCars', Manufacturer.manufacturerId]">{{Manufacturer.manufacturerId}}</a>
                     </td>
                 <td>{{Manufacturer.manufacturerName}}</td>
                 <td>{{Manufacturer.manufacturerCountry}}</td>

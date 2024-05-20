@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
  }
  
  
-
  onSubmit() {
   let loginRequest: LoginRequest =<LoginRequest> {
     userName : this.form.controls["userName"].value,
